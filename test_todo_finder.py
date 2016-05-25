@@ -20,5 +20,11 @@ lorem ipsum
 TODO: foobar
 lorem ipsum"""), True)
 
+    def test_find_unsure_marker(self):
+        self.assertEqual(self.tf.find_todos("""
+lorem ipsum
+foobar (?)
+lorem ipsum"""), True)
+
 if __name__ == '__main__':
     unittest.main()
