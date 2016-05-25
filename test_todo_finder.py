@@ -26,5 +26,14 @@ lorem ipsum
 foobar (?)
 lorem ipsum"""), True)
 
+    def test_ignore_draft_todos(self):
+        self.assertEqual(self.tf.find_todos("""
++++
+draft = true
++++
+lorem ipsum
+TODO: foobar
+lorem ipsum"""), False)
+
 if __name__ == '__main__':
     unittest.main()
