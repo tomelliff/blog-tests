@@ -12,7 +12,13 @@ class TodoFinderTest(unittest.TestCase):
         self.assertEqual(self.tf.find_todos("""
 lorem ipsum
 foobar
-lorem ipsum"""), 0)
+lorem ipsum"""), False)
+
+    def test_find_todo_block(self):
+        self.assertEqual(self.tf.find_todos("""
+lorem ipsum
+TODO: foobar
+lorem ipsum"""), True)
 
 if __name__ == '__main__':
     unittest.main()

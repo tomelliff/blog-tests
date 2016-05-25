@@ -2,4 +2,7 @@
 
 class TodoFinder:
     def find_todos(self, text):
-        return 0
+        if "TODO:" in text:
+            return True
+        else:
+            return False
