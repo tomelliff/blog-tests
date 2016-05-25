@@ -1,4 +1,5 @@
 #!/usr/bin/env python
 
 class TodoFinder:
-    pass 
+    def find_todos(self, text):
+        return 0
